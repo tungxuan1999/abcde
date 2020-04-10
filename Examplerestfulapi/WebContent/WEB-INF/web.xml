@@ -5,11 +5,21 @@
     <welcome-file>index.html</welcome-file>
   </welcome-file-list>
   
-  <servlet>
+  	<servlet>
 		<servlet-name>Jersey Web Application</servlet-name>
 		<servlet-class>com.sun.jersey.spi.container.servlet.ServletContainer</servlet-class>
 		<load-on-startup>1</load-on-startup>
 	</servlet>
+	<servlet>
+		<description></description>
+		<display-name>Controller</display-name>
+		<servlet-name>Controller</servlet-name>
+		<servlet-class>com.javamaster.controller.HomeServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Controller</servlet-name>
+		<url-pattern>/</url-pattern>
+	</servlet-mapping>
 	<servlet-mapping>
 		<servlet-name>Jersey Web Application</servlet-name>
 		<url-pattern>/abcd/*</url-pattern>
